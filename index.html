@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./login/login.css">
+    <title>Login</title>
+</head>
+<body>
+    <main class="container">
+        <div class="imagem-fundo">
+            <img src="img/maranguape-img-login1.png" alt="">
+        </div>
+        <div class="container-left">
+            <div class="container-login" id="acessar">
+                <div class="login">
+                    <h1>Login</h1>
+                    <p>Lorem ipsum dolor sit amet.</p>
+                </div>
+
+                <form action="" class="formulario-login">
+                    <div class="input-email">
+                        <input type="email" name="" id="" placeholder="Digite seu E-mail">
+                    </div>
+
+                    <div class="input-senha">
+                        <input type="text" name="" id="senha" placeholder="Digite sua Senha">
+                        <label for="senha" class="caixasenha">
+                            <i class="mostrar">
+                                <img src="img/mostrar.svg" alt="" id="mostrar">
+                            </i>
+
+                            <i class="esconder">
+                                <img src="img/esconder.svg" id="esconder" alt="">
+                            </i>
+                        </label>
+                    </div>
+
+                    <div class="botoes">
+                        <input type="submit" value="Entrar" class="entrar">
+                        <a href="">
+                            <button value="visitante" class="visitante"><span class="text">Anônimo</span></button>
+                        </a>
+                    </div>
+
+                    <div class="cadastrar">
+                        <p>Lorem ipsum dolor sit. <span id="cadastrar">Lorem, ipsum.</span></p>
+                    </div>
+                </form>
+            </div>
+
+            <div class="container-login container-cadastrar" id="cadaster">
+                <div class="cadastro">
+                    <h1>Cadastro</h1>
+                    <p>Lorem ipsum dolor sit.</p>
+                </div>
+
+                <form action="" class="formulario-cadastro">
+                    <div class="dados-login">
+                        <h1>Dados de Login</h1>
+                    </div>
+
+                    <div class="dados-cadastro">
+                        <input type="email" class="email" name="" id="" placeholder="Informe o seu E-mail">
+                        <input type="password" name="" id="pass1" class="senha" placeholder="Criar Senha" oninput="senha()">
+                        <input type="password" name="" id="pass2" class="repetir" placeholder="Repetir Senha" oninput="senha()">
+                        <p class="mensagem">As senhas devem ter no miníno 8 digitos e serem compatíveis</p>
+                    </div>
+
+                    <div class="contato">
+                        <h1>Dados de Contato</h1>
+                    </div>
+
+                    <div class="dados-contato">
+                        <input type="text" name="" id="" class="nome" placeholder="Informe o seu nome">
+                        <input type="date" name="" id="" placeholder="Nascimento">
+                        <select name="" id="">
+                            <option value="sexo">Sexo</option>
+                            <option value="masculino">Masculino</option>
+                            <option value="feminino">Feminino</option>
+                            <option value="naodizer">Prefiro não informar</option>
+                        </select>
+                        <input type="number" name="" id="" class="cep" placeholder="Cep">
+                        <input type="text" name="" id="" class="endereco" placeholder="Endereço">
+                        <input type="number" name="" id="" class="numero" placeholder="Nº">
+                    </div>
+
+                    <div class="cadastrar">
+                        <input type="submit" value="Cadastrar" class="botao-cadastro">
+                        <p>Lorem ipsum dolor sit <span id="login">amet.</span></p>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <div class="container-right">
+
+        </div>
+    </main>
+    
+
+
+    <script src="./login/login.js"></script>
+</body>
+</html>

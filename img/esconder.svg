@@ -1,0 +1,823 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 16 16" style="-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);"><g fill="#b1b1b1"><path d="M13.359 11.238C15.06 9.72 16 8 16 8s-3-5.5-8-5.5a7.028 7.028 0 0 0-2.79.588l.77.771A5.944 5.944 0 0 1 8 3.5c2.12 0 3.879 1.168 5.168 2.457A13.134 13.134 0 0 1 14.828 8c-.058.087-.122.183-.195.288c-.335.48-.83 1.12-1.465 1.755c-.165.165-.337.328-.517.486l.708.709z"/><path d="M11.297 9.176a3.5 3.5 0 0 0-4.474-4.474l.823.823a2.5 2.5 0 0 1 2.829 2.829l.822.822zm-2.943 1.299l.822.822a3.5 3.5 0 0 1-4.474-4.474l.823.823a2.5 2.5 0 0 0 2.829 2.829z"/><path d="M3.35 5.47c-.18.16-.353.322-.518.487A13.134 13.134 0 0 0 1.172 8l.195.288c.335.48.83 1.12 1.465 1.755C4.121 11.332 5.881 12.5 8 12.5c.716 0 1.39-.133 2.02-.36l.77.772A7.029 7.029 0 0 1 8 13.5C3 13.5 0 8 0 8s.939-1.721 2.641-3.238l.708.709zm10.296 8.884l-12-12l.708-.708l12 12l-.708.708z"/></g></svg>
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;300;400;500;600;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Outfit', sans-serif;
+}
+
+.container{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+}
+
+.container-left{
+    width: 50%;
+    height: 100vh;
+}
+
+.container-login{
+    width: 80%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.login{
+    width: 55%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.login h1{
+    font-size: 3.125rem;
+    font-weight: 500;
+    color: #002E5B;
+}
+
+.login p{
+    color: #B1B1B1;
+    font-size: 0.9375rem;
+}
+
+.formulario-login{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.input-senha{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-left: 1.2rem;
+}
+
+.caixasenha{
+    position: relative;
+    top: 0;
+    right: 1.75rem;
+}
+
+.caixasenha .mostrar img,
+.caixasenha .esconder img{
+    width: 1.25rem;
+    cursor: pointer;
+}
+
+.caixasenha .mostrar{
+    display: none;
+}
+
+.input-email input,
+.input-senha input{
+    width: 21.875rem;
+    height: 4rem;
+    border-radius: 8px;
+    border: none;
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
+    padding: 15px;
+    font-size: 1.125rem;
+    color: #949494;
+    outline: none;
+}
+
+.input-email input::placeholder,
+.input-senha input::placeholder{
+    color: #B1B1B1;
+}
+
+.botoes{
+    width: 95%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    gap: 0.75rem;
+}
+
+.botoes .entrar,
+.botoes .visitante{
+    width: 10.6875rem;
+    height: 4rem;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.25rem;
+    font-weight: 500;
+}
+
+.botoes .entrar{
+    background-image: linear-gradient(to right, #4A72FF 2.09%, #03FFA4 97.91%);
+    color: #ffffff;
+}
+
+.botoes .visitante{
+    border: 1px solid;
+    cursor: pointer;
+    outline: none;
+    -webkit-transform: translate(0);
+    transform: translate(0);
+    border-image: linear-gradient(to right, #4A72FF, #03FFA4);
+    background-image: linear-gradient(-45deg, #4A72FF, #03FFA4);
+    border-radius: 8px;
+    box-shadow: 1px 1px 10px rgba(255, 255, 255, 0.438);
+    -webkit-transition: box-shadow 0.25s;
+    color: white;
+}
+
+
+.visitante .text {
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-image: linear-gradient(45deg, #4A72FF, #03FFA4);
+    font-size: 1.25rem;
+    font-weight: 500;
+  }
+  
+  .visitante:after {
+    content: "";
+    border-radius: 8px;
+    position: absolute;
+    margin: 0.03rem;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: -1;
+    background: #fff;
+  }
+
+.cadastrar{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 0.9357rem;
+}
+
+.cadastrar p{
+    color: #B1B1B1;
+}
+.cadastrar span{
+    color: #4A72FF;
+    cursor: pointer;
+}
+
+.cadastro{
+    width: 56%;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.cadastro h1{
+    font-size: 2.5rem;
+    font-weight: 500;
+    color: #002E5B;
+}
+
+.cadastro p{
+    font-size: 0.9375;
+    font-weight: 300;
+    color: #b1b1b1;
+}
+
+.contato h1,
+.dados-login h1{
+    font-size: 1.5675;
+    color: #002E5B;
+    font-weight: 500;
+}
+
+.formulario-cadastro{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+#cadaster{
+    display: none;
+}
+
+.dados-login,
+.contato{
+    width: 56%;
+}
+
+.dados-cadastro,
+.dados-contato{
+    width: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.dados-cadastro input[type="email"],
+.dados-contato .nome{
+    width: 21.875rem;
+    height: 3rem;
+    border-radius: 8px;
+    border: none;
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
+    padding: 15px;
+    font-size: 0.875rem;
+    color: #949494;
+    outline: none;
+}
+
+.dados-cadastro input[type="password"],
+.dados-contato input[type="date"],
+.dados-contato select{
+    width: 10.5rem;
+    height: 3rem;
+    border-radius: 8px;
+    border: none;
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
+    padding: 15px;
+    font-size: 0.875rem;
+    color: #949494;
+    outline: none;
+}
+
+.dados-contato input[type="date"]::-webkit-calendar-picker-indicator{
+    cursor: pointer;
+    filter: invert(0.8) brightness(50%) sepia(100%) saturate() hue-rotate(240deg);
+}
+
+.dados-contato .cep,
+.dados-contato .endereco{
+    width: 8rem;
+    height: 3rem;
+    border-radius: 8px;
+    border: none;
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
+    padding: 15px;
+    font-size: 0.875rem;
+    color: #949494;
+    outline: none;
+}
+
+.dados-contato .numero{
+    width: 4rem;
+    height: 2.8375rem;
+    border-radius: 8px;
+    border: none;
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
+    padding: 15px;
+    font-size: 0.875rem;
+    color: #949494;
+    outline: none;
+}
+
+.cadastrar{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.cadastrar input[type="submit"]{
+    width: 21.875rem;
+    height: 3.5rem;
+    border-radius: 8px;
+    border: none;
+    padding: 15px;
+    font-size: 1.125rem;
+    outline: none;
+    background-image: linear-gradient(to right, #4A72FF 2.09%, #03FFA4 97.91%);
+    color: #ffffff;
+    cursor: pointer;
+}
+
+#cadester{
+    display: none;
+}
+
+.container-right{
+    width: 50%;
+    height: 100vh;
+    background-image: url(../maranguape-img-login1.png);
+    background-size: cover;
+}
+
+/* ---- AQUI COMEÇA A RESPONSIVIDADE DO SITE ---- */
+
+@media screen and (width: 1180px) and (orientation: landscape){
+    .login{
+        width: 70%;
+    }
+
+    .cadastro,
+    .dados-login,
+    .contato{
+        margin-right: 4rem;
+    }
+}
+
+@media screen and (width: 1024px) and (orientation: landscape){
+    .login{
+        width: 80%;
+    }
+    
+    
+    .cadastro,
+    .dados-login,
+    .contato{
+        margin-right: 4.5rem;
+    }
+
+    .cadastro h1{
+        font-size: 2.5rem;
+    }
+
+    .dados-login h1,
+    .contato h1{
+        font-size: 1.5rem;
+    }
+
+    .cadastro p{
+        font-size: 0.85rem;
+    }
+    
+.dados-cadastro input[type="password"],
+.dados-contato input[type="date"],
+.dados-contato select{
+    width: 9.5rem;
+    height: 2.75rem;
+}
+
+    
+.dados-contato .numero{
+    width: 4rem;
+    height: 2.75rem;
+}
+
+    
+.dados-contato .cep,
+.dados-contato .endereco{
+    width: 7rem;
+    height: 2.75rem;
+}
+
+    .container-cadastrar{
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+}
+
+
+.dados-cadastro input[type="email"],
+.dados-contato .nome{
+    width: 20rem;
+    height: 2.75rem;
+}
+
+
+.cadastrar input[type="submit"]{
+    width: 20rem;
+    height: 3.5rem;
+}
+
+@media screen and (max-width: 900px) and (orientation: landscape){
+    .container-left{
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .container-login{
+        height: 95vh;
+        border-radius: 16px;
+        box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
+    }
+
+    .input-email input,
+    .input-senha input{
+        height: 3.2rem;
+    }
+
+    .botoes .visitante,
+    .botoes .entrar{
+        height: 3rem;
+    }
+
+    .login{
+        width: 50%;
+    }
+
+    .container-right{
+        display: none;
+    }
+
+    .dados-cadastro input[type="password"]{
+        width: 12rem;
+        height: 2.75rem;
+    }
+
+    
+    .dados-contato input[type="date"],
+    .dados-contato select{
+        width: 12.5rem;
+    }
+    
+
+.dados-cadastro input[type="email"],
+.dados-contato .nome{
+    width: 26rem;
+    height: 2.75rem;
+}
+
+
+.dados-contato .cep,
+.dados-contato .endereco{
+    width: 10rem;
+    height: 2.75rem;
+}
+
+
+.cadastrar input[type="submit"]{
+    width: 26rem;
+    height: 3.5rem;
+}
+}
+
+@media screen and (max-width: 900px) and (orientation: landscape){
+    
+.container-cadastrar{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.cadastro h1{
+    font-size: 1.9rem;
+}
+
+.dados-login h1,
+.contato h1{
+    font-size: 1.15rem;
+}
+    .cadastro,
+    .dados-login,
+    .contato{
+        margin-right: 10rem;
+    }
+    .dados-cadastro input[type="password"]{
+        width: 16.5rem;
+        height: 2.5rem;
+    }
+
+    
+    .dados-cadastro input[type="email"]{
+        width: 40rem;
+        height: 2.5rem;
+    }
+
+    
+.dados-contato .nome{
+    height: 2.5rem;
+}
+
+    
+    .dados-contato input[type="date"],
+    .dados-contato select{
+        width: 7rem;
+        height: 2.9rem;
+    }
+
+.dados-contato .cep,
+.dados-contato .endereco,
+.dados-contato .numero{
+    height: 2.9rem;
+}
+
+
+
+.cadastrar input[type="submit"]{
+    width: 34rem;
+    height: 3rem;
+}
+
+}
+
+@media screen and (max-width: 821px) and (orientation: portrait){
+    .container-left{
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .container-login{
+        background-color: #fff;
+        box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
+        height: 70vh;
+        border-radius: 16px;
+    }
+
+    .container-right{
+        display: none;
+    }
+
+    .container-cadastrar{
+        height: 90vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        gap: 0.2rem;
+    }
+
+    
+.dados-cadastro input[type="email"],
+.dados-contato .nome{
+    width: 22rem;
+    height: 2.75rem;
+}
+
+
+.cadastrar input[type="submit"]{
+    width: 22rem;
+}
+    
+}
+
+@media screen and (max-width: 680px) and (orientation: landscape){
+    .login{
+        margin-right: 6rem;
+    }
+
+    
+}
+
+@media screen and (max-width: 550px) and (orientation: portrait){
+    .input-email input,
+    .input-senha input{
+        width: 19rem;
+    }
+
+    .botoes .entrar,
+    .botoes .visitante{
+        width: 9.1rem;
+    }
+
+    .login{
+        margin-right: 4rem;
+    }
+
+    .cadastro,
+    .dados-login,
+    .contato{
+        margin-right: 5rem;
+    }
+
+    
+    .dados-cadastro input[type="password"]{
+        width: 9rem;
+    }
+
+    
+    .dados-contato input[type="date"],
+    .dados-contato select{
+        width: 9rem;
+    }
+
+    
+.dados-contato .cep,
+.dados-contato .endereco{
+    width: 6.5rem;
+}
+
+.cadastro h1{
+    font-size: 2.5rem;
+}
+
+.dados-login h1,
+.contato h1{
+    font-size: 1.5rem;
+}
+
+.cadastrar input[type="submit"]{
+    width: 19rem;
+}
+
+
+.container-cadastrar{
+    height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+}
+
+@media screen and (max-width: 470px) and (orientation: landscape){
+    .container-login{
+        width: 90%;
+        height: 100vh;
+    }
+}
+
+@media screen and (max-width: 420px) and (orientation: portrait){
+    .container-login{
+        width: 90%;
+    }
+
+    .input-email input,
+    .input-senha input{
+        width: 17.5rem;
+    }
+
+    .botoes .entrar,
+    .botoes .visitante{
+        width: 8.5rem;
+    }
+
+    .login{
+        margin-right: 4rem;
+    }
+
+    .login p,
+    .cadastrar p{
+        font-size: 0.875rem;
+    }
+
+    
+    .dados-cadastro input[type="password"]{
+        width: 8.75rem;
+    }
+    
+    .dados-contato input[type="date"],
+    .dados-contato select{
+        width: 8.75rem;
+    }
+
+    
+.dados-contato .cep,
+.dados-contato .endereco{
+    width: 6.2rem;
+}
+
+
+.cadastrar input[type="submit"]{
+    width: 18.5rem;
+}
+}
+
+@media screen and (max-width: 400px) and (orientation: portrait){
+    .input-email input,
+    .input-senha input{
+        width: 15.5rem;
+    }
+
+    .botoes .entrar,
+    .botoes .visitante{
+        width: 7.5rem;
+    }
+
+    .login{
+        margin-right: 3rem;
+    }
+
+    .login p,
+    .cadastrar p{
+        font-size: 0.785rem;
+    }
+
+    
+    .dados-cadastro input[type="password"],
+    .dados-contato input[type="date"],
+    .dados-contato select{
+        width: 8.25rem;
+    }
+
+    
+.dados-contato .cep,
+.dados-contato .endereco{
+    width: 5.75rem;
+}
+
+
+.cadastrar input[type="submit"]{
+    width: 17.75rem;
+}
+}
+
+
+@media screen and (max-width: 376px) and (orientation: portrait){
+    .dados-cadastro input[type="password"],
+    .dados-contato input[type="date"],
+    .dados-contato select{
+        width: 7.8rem;
+        font-size: 0.7580rem;
+    }
+
+    .dados-login h1{
+        font-size: 1.4rem;
+    }
+
+    .contato h1{
+        font-size: 1.4rem;
+    }
+
+    
+.dados-cadastro input[type="email"],
+.dados-contato .nome,
+.dados-contato .cep,
+.dados-contato .endereco,
+.dados-contato .numero{
+    font-size: 0.7580rem;
+}
+    
+.dados-contato .cep,
+.dados-contato .endereco{
+    width: 5.25rem;
+}
+
+.cadastrar input[type="submit"]{
+    width: 17rem;
+}
+}
+
+
+@media screen and (max-width: 360px) and (orientation: portrait){
+
+    .dados-cadastro input[type="password"],
+    .dados-contato input[type="date"],
+    .dados-contato select{
+        width: 7.5rem;
+        font-size: 0.75rem;
+    }
+
+    .dados-cadastro input[type="email"],
+    .dados-contato .nome,
+    .dados-contato .cep,
+    .dados-contato .endereco,
+    .dados-contato .numero{
+        font-size: 0.75rem;
+    }
+    
+.dados-contato .cep,
+.dados-contato .endereco{
+    width: 5rem;
+}
+
+.cadastrar input[type="submit"]{
+    width: 16rem;
+}
+}
+
+@media screen and (max-width: 340px) and (orientation: portrait){
+
+    .input-email input,
+    .input-senha input{
+        width: 13.5rem;
+    }
+
+    .botoes .entrar,
+    .botoes .visitante{
+        width: 6.5rem;
+    }
+
+    .login{
+        margin-right: 3rem;
+    }
+
+    .login p,
+    .cadastrar p{
+        font-size: 0.785rem;
+    }
+}
