@@ -179,9 +179,10 @@
 .cadastrar p{
     color: #B1B1B1;
 }
-.cadastrar span{
+.cadastrar span a{
     color: #4A72FF;
     cursor: pointer;
+    text-decoration: none;
 }
 
 .cadastro{
